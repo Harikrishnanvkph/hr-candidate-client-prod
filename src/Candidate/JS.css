@@ -1,0 +1,323 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-div-button{
+    position: relative;
+    max-width: 100px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-style: none;
+    background-color: transparent;
+}
+
+.logout{
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 5px);
+    right: 0%;
+    min-width: 200px;
+    width: fit-content;
+    background-color:dodgerblue ;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color : white;
+
+}
+
+.hr-title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.logout:hover{
+    cursor: pointer;
+}
+
+.profile-div-button-span{
+    display: inline-block;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    vertical-align:middle;
+}
+
+.jb-mobile{
+    height : 100%
+}
+
+.profile-div-button-span-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.job-seeker{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.jb-nav{
+    background-color: antiquewhite;
+    flex : 0 0 auto;
+}
+
+.jb-body{
+    flex : 1 1 auto;
+    background-color: aliceblue;
+    overflow: hidden;
+    /*max-height: calc(100vh - 78px);*/
+    height: 100%;
+}
+
+
+.jb-menu{
+    background-color: bisque;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    max-width: 250px;
+    height: 100%;
+}
+
+.jb-laptop{
+    max-height: 100%;
+}
+
+.jb-icon{
+    font-size: 30px !important;
+}
+
+.jb-p{
+    font-size: 18px;
+}
+
+.jb-menu-mobile{
+    background-color: antiquewhite;
+    flex : 0 1 auto;
+    height : max-content !important;
+}
+
+
+.jbprofile-pic {
+    width: 200px;
+    height: 200px;
+}
+
+
+.jb-section-mobile{
+    overflow-y: hidden;
+    flex : 1;
+}
+
+.circle{
+    clip-path: circle(50%);
+    background-color: green;
+    width: 20px;
+    height: 20px;
+}
+
+.jb-title{
+    border: 1px solid green;
+    gap: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.jbicon:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+
+.jbprofile-pic:hover img {
+    opacity: 0.7;
+}
+
+.jb-label{
+    vertical-align: middle;
+    text-align: center !important;
+}
+
+
+.jbprofile-pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.jbprofile-details{
+    width: 550px;
+    margin : 0 !important;
+    min-height: 200px;
+    height: fit-content;
+    & p{
+        margin : 0px
+    }
+}
+
+.jb-update input{
+    flex: 1 0 120px;
+}
+
+.emp-jb-card{
+    border-radius: 10px;
+    width: 100%;
+    flex : auto
+}
+
+.emp-jb-card p{
+    overflow-wrap: break-word;
+    margin: 5px;
+}
+
+.emp-card{
+    background-color: white !important;
+    height: 100%;
+}
+
+.emp-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ref-inp input{
+    min-width: min(200px,100%);
+}
+
+.jb-section{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.jb-referral, .jb-services{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stickly-referral{
+    flex : 0 1 auto;
+    width: 100%;
+}
+
+.candidate-seeker{
+    max-height: 100%;
+    width: 100%;
+    flex : 1 1 0;
+    overflow-y : scroll;
+}
+
+.jb-help{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width : 768px){
+    .ref-inp input{
+        min-width: 300px;
+    }
+}
+
+@media (min-width : 576px){
+    .ce-chat-settings-column{
+        display: none !important;
+    }
+    
+    .ce-chat-feed-column{
+        flex-basis: 60% !important;
+        width: 60% !important;
+        max-width: 60% !important;
+    }
+    
+    .ce-chat-list-column{
+        flex-basis: 40% !important;
+        width: 40% !important;
+        max-width: 40% !important;
+    }
+}
+
+@media (max-width : 768px){
+    .hr-title{
+        font-size: 1em;
+    }
+    .jb-menu{
+        max-width: 100px;
+    }
+    .jb-p{
+        text-align: center;
+        font-size: 12px;
+    }
+    .jb-icon{
+        font-size: 20px;
+        margin: 0% !important;
+    }
+    .jbprofile-details{
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width : 575px){
+    .candidate-seeker{
+        height : 400px;
+        overflow-y: scroll;
+    }
+    .ref-inp input{
+        margin-top: 10px;
+        min-width: max(200px,100%);
+    }
+
+    .jb-body-mobile{
+        height: 100%;
+    }
+
+    .jbprofile-details{
+        width: fit-content;
+    }
+
+    .emp-jb-card{
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 10px;
+        min-width: 400px;
+
+    }
+    .emp-card{
+        background-color: aliceblue !important;
+    }
+    .stickly-referral{
+        flex : 0 1 auto;
+    }
+    .stickly-referral button{
+        width : 100%;
+    }
+}
+
+@media (max-width : 400px){
+    .emp-jb-card{
+        min-width: 275px;
+        flex-grow: 1;
+    }
+}
+
+

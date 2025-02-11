@@ -1,0 +1,209 @@
+
+*{
+  box-sizing: border-box;
+}
+.nav-expand{
+  background-color: antiquewhite;
+}
+
+.nav-link{
+  font-size: 1rem;
+}
+
+.expand-fixed{
+  position: fixed;
+}
+
+/* BodyIntro.jsx */
+.bodyIntro{
+  padding: 10px;
+  min-height: 300px;
+  background-color: bisque;
+  word-spacing: 10px;
+  & p{
+    font-size: 20px;
+  }
+  button{
+    padding: 7px 10px;
+    border-radius: 10%;
+    &:hover{
+      background-color: black;
+      color: white;
+      border-color: white;
+      border-style: solid;
+    }
+  }
+}
+
+.bodyIntro span{
+  font: normal bold 40px 'Courier New', Courier, monospace;
+}
+
+/* Solution Offer */
+.s-icon{
+  font-size: 40px !important;
+}
+
+.solution-offer{
+  background-color: antiquewhite;
+}
+
+.solution-offer:hover .service-title mark{
+  background-color: aliceblue;
+  border: 2px dashed black;
+}
+
+.st-service{
+  box-sizing: border-box;
+}
+
+
+/* Pricing */
+.switch{
+  position: relative;
+  width: 62px;
+  height: 32px;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(176, 174, 174);
+  border-radius: 1px;
+}
+
+.checkInput{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider::before{
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 22px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  transition: all .4s;
+}
+
+.checkInput:checked + .slider::before{
+  transform: translateX(100%);
+}
+
+.checkInput:checked + .checkbox{
+  background-color: dodgerblue;
+}
+
+.price-element{
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.price_plan_tag{
+  background-color: aliceblue;
+  border-radius: 2%;
+  height: 100%;
+}
+
+.pricing{
+  background-color: bisque;
+  &:hover .pricing-title{
+    border: 2px dashed black;
+    & mark{
+      background-color: aliceblue;
+    }
+  }
+}
+
+.pricing-highlighter{
+  font-weight: 500;
+}
+
+/* Footer */
+.footer{
+  height: 100%;
+  min-height: 200px;
+  background-color: antiquewhite;
+}
+
+.about-us:hover .pricing-highlighter{
+  padding: 0px 5px;
+  border: 2px dashed black;
+  background-color: aliceblue;
+}
+
+.footer-ul{
+  list-style-type: none;
+  margin: 0%;
+  & *{
+    padding: 0%;
+    margin: 0%;
+  }
+  & li{
+    padding: 5px;
+  }
+}
+
+.footer-cpy{
+  font-size: 12px;
+}
+
+@media (max-width : 575px){
+  .expand-over{
+      height: 100vh;
+      background-color: antiquewhite;
+  }
+  .bodyIntro{
+    padding: 20px;
+    & p{
+      font-size: 15px;
+    }
+    & span{
+      font-size: 30px;
+    }
+    button{
+      padding: 4px 7px;
+    }
+  }
+}
+
+@media (max-width : 765px){
+  .bodyIntro {
+    word-spacing: 5px;
+    & p,span{
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width : 400px){
+  h4{
+    font-size: 1.2rem;
+  }
+  .nav-logo{
+    font-size: 30px !important;
+  }
+  .expand-open{
+    font-size: 20px !important;
+  }
+  .price_plan_tag{
+    padding: auto 0px;
+  }
+  .price-plan-inner{
+    padding: 0% !important;
+  }
+}
+
+@media (max-width : 1139px){
+  .price-element{
+    font-size: 60px;
+    margin: 0px 10px;
+  }
+}
