@@ -116,7 +116,7 @@ export default function JBMessages(){
             setCurrentConversation(createConversation.data)
             delete createConversation.data.messages
             setEndReceivers((prevstate)=>[...prevstate,createConversation.data])
-            setRCV(receiver.firstName)
+            setRCV(receiver.name)
         }
 
     }
@@ -134,7 +134,6 @@ export default function JBMessages(){
 
     const handleInput = async(e)=>{
         if(searchType === "add"){
-            console.log('d')
             if(e.target.value !== "" && e.target.value.trim() !== ""){
                 setSearch(e.target.value)
                 const addUsers = await axios.post(
