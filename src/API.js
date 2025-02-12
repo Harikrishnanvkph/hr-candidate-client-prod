@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const serverTemp = "https://hr-candidate-server.onrender.com";
-const baseUrl = 'https://hr-candidate-server-prod.onrender.com/';
+const baseUrl = 'https://hr-candidate-server-prod.onrender.com';
 
 async function login(loginData){
     const result = await axios.post(`${baseUrl}/login`,loginData);
