@@ -65,7 +65,6 @@ export default function JBMessages(){
                     }
                 }
             )
-            console.log(conversations.data)
             setEndReceivers(conversations.data);
         }
 
@@ -123,7 +122,6 @@ export default function JBMessages(){
     }
 
     const sendOperation = (message)=>{
-        console.log(receiverSocketID)
         ws.emit('chat-user',{
             receiverSocketID : receiverSocketID,
             message : message,
@@ -145,7 +143,6 @@ export default function JBMessages(){
                         name : e.target.value
                     }
                 )
-                console.log(addUsers.data)
                 setSearchedUsers(addUsers.data)
             }else{
                 setSearchedUsers([])
