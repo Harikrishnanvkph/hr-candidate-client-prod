@@ -78,9 +78,7 @@ export default function JBMessages(){
     },[])
 
     const fetchMessage = async(sender_uuid,receiver_uuid)=>{
-        console.log('hi')
         if(currentConversation && (Number(receiver_uuid) === Number(currentConversation.receiver.uuid))){
-            console.log(sender_uuid,receiver_uuid)
             return;
         }
         const getReceiverSocketID = await axios.post(
@@ -113,8 +111,6 @@ export default function JBMessages(){
         if(createConversation.data){
             alert(`conversation Created or Added\nselect 'search' radio button for more info`)
             setSearchType("add")
-            setCurrentConversation(createConversation.data)
-            delete createConversation.data.messages
             setEndReceivers((prevstate)=>[...prevstate,createConversation.data])
             setRCV(receiver.name)
         }
@@ -207,7 +203,6 @@ export default function JBMessages(){
                                         flag = true
                                     }else if(endReceivers?.length > 0){
                                         for(let a of endReceivers){
-                                            console.log(Number(src.uuid),a,user_id.uuid)
                                             if(Number(src.uuid) === Number(a.sender.uuid)  ||
                                                 Number(src.uuid) === Number(a.receiver.uuid)){
                                                 flag = true
